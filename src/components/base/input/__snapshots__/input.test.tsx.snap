@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input (Presentational Component) Snapshot for Variants renders correctly when disabled 1`] = `
+<View>
+  <Text
+    accessibilityLabelledBy=":r9:"
+    className="font-notoSansThai mt-[1px] font-normal mb-1 text-base text-text-disabled"
+    nativeID=":r9:-label"
+    style={
+      {
+        "writingDirection": "ltr",
+      }
+    }
+  >
+    Disabled
+  </Text>
+  <View
+    className="rounded-lg px-4 py-2 min-h-[50px] flex flex-row shadow-none border bg-action-hover text-text-disabled border-outline-border"
+  >
+    <TextInput
+      accessibilityLabel="Disabled"
+      accessibilityLabelledBy=":r9:-label"
+      autoComplete="off"
+      autoCorrect={false}
+      className="flex-1 font-notoSansThai text-[14px] font-normal leading-normal text-text-disabled"
+      editable={false}
+      importantForAutofill="noExcludeDescendants"
+      nativeID=":r9:"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#A0A6AD"
+      selectionColor="#33383F"
+      style={
+        {
+          "textAlign": "left",
+          "writingDirection": "ltr",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Input (Presentational Component) Snapshot for Variants renders correctly when focused 1`] = `
+<View>
+  <Text
+    accessibilityLabelledBy=":r8:"
+    className="font-notoSansThai mt-[1px] font-normal text-text-primary mb-1 text-base"
+    nativeID=":r8:-label"
+    style={
+      {
+        "writingDirection": "ltr",
+      }
+    }
+  >
+    Focused
+  </Text>
+  <View
+    className="rounded-lg bg-white px-4 py-2 min-h-[50px] flex flex-row border-primary-500 border"
+  >
+    <TextInput
+      accessibilityLabel="Focused"
+      accessibilityLabelledBy=":r8:-label"
+      autoComplete="off"
+      autoCorrect={false}
+      className="flex-1 font-notoSansThai text-[14px] font-normal leading-normal"
+      editable={true}
+      importantForAutofill="noExcludeDescendants"
+      nativeID=":r8:"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#A0A6AD"
+      selectionColor="#33383F"
+      style={
+        {
+          "textAlign": "left",
+          "writingDirection": "ltr",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Input (Presentational Component) Snapshot for Variants renders correctly with error state 1`] = `
+<View>
+  <Text
+    accessibilityLabelledBy=":r7:"
+    className="font-notoSansThai mt-[1px] font-normal mb-1 text-base text-error-500"
+    nativeID=":r7:-label"
+    style={
+      {
+        "writingDirection": "ltr",
+      }
+    }
+  >
+    Error
+  </Text>
+  <View
+    className="rounded-lg bg-white px-4 py-2 min-h-[50px] flex flex-row shadow-none border border-error-500"
+  >
+    <TextInput
+      accessibilityLabel="Error"
+      accessibilityLabelledBy=":r7:-label"
+      autoComplete="off"
+      autoCorrect={false}
+      className="flex-1 font-notoSansThai text-[14px] font-normal leading-normal"
+      editable={true}
+      importantForAutofill="noExcludeDescendants"
+      nativeID=":r7:"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholderTextColor="#A0A6AD"
+      selectionColor="#33383F"
+      style={
+        {
+          "textAlign": "left",
+          "writingDirection": "ltr",
+        }
+      }
+    />
+  </View>
+  <Text
+    className="font-notoSansThai font-normal text-base text-error-500 mt-1"
+    style={
+      {
+        "writingDirection": "ltr",
+      }
+    }
+  >
+    Error!
+  </Text>
+</View>
+`;

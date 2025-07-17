@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text (Presentational Component) Snapshots for variants / states renders Body / error color correctly 1`] = `
+<Text
+  className="font-notoSansThai mt-[1px] text-[14px] font-normal text-error-500"
+  style={
+    {
+      "writingDirection": "ltr",
+    }
+  }
+>
+  Error text
+</Text>
+`;
+
+exports[`Text (Presentational Component) Snapshots for variants / states renders CaptionRegular with custom className 1`] = `
+<Text
+  className="font-notoSansThai mt-[1px] text-[14px] font-normal text-text-primary italic"
+  style={
+    {
+      "writingDirection": "ltr",
+    }
+  }
+>
+  Caption
+</Text>
+`;
+
+exports[`Text (Presentational Component) Snapshots for variants / states renders Header1 / primary variant correctly 1`] = `
+<Text
+  className="font-notoSansThai mt-[1px] text-[19px] font-semibold text-primary-500"
+  style={
+    {
+      "writingDirection": "ltr",
+    }
+  }
+>
+  Header
+</Text>
+`;

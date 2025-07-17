@@ -1,0 +1,70 @@
+{
+  "cli": {
+    "appVersionSource": "local"
+  },
+  "build": {
+    "simulator": {
+      "channel": "simulator",
+      "ios": {
+        "simulator": true,
+        "image": "latest"
+      },
+      "android": {
+        "image": "latest"
+      },
+      "env": {
+        "APP_ENV": "development",
+        "EXPO_NO_DOTENV": "1"
+      }
+    },
+    "development": {
+      "developmentClient": true,
+      "channel": "development",
+      "distribution": "internal",
+      "ios": {
+        "image": "latest"
+      },
+      "android": {
+        "image": "latest"
+      },
+      "env": {
+        "APP_ENV": "development",
+        "EXPO_NO_DOTENV": "1"
+      }
+    },
+    "staging": {
+      "channel": "staging",
+      "ios": {
+        "image": "latest"
+      },
+      "android": {
+        "buildType": "apk",
+        "image": "latest"
+      },
+      "env": {
+        "APP_ENV": "staging",
+        "EXPO_NO_DOTENV": "1",
+        "FLIPPER_DISABLE": "1"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "distribution": "store",
+      "ios": {
+        "image": "latest"
+      },
+      "android": {
+        "buildType": "app-bundle",
+        "image": "latest"
+      },
+      "env": {
+        "EXPO_NO_DOTENV": "1",
+        "APP_ENV": "production",
+        "FLIPPER_DISABLE": "1"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

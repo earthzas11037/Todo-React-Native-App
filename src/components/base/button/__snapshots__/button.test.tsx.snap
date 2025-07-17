@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component Variants Snapshots should render correctly when disabled 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": true,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessible={true}
+  className="flex flex-row items-center justify-center rounded-lg px-5 py-3 bg-primary-500 self-start opacity-45 "
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+>
+  <Text
+    className="mt-[1px] font-notoSansThai font-medium text-[12px] text-white"
+    style={
+      {
+        "writingDirection": "ltr",
+      }
+    }
+  >
+    Disabled Snap
+  </Text>
+</View>
+`;
+
+exports[`Button Component Variants Snapshots should render correctly with error text variant 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessible={true}
+  className="flex flex-row items-center justify-center rounded-lg px-4 py-2 bg-transparent self-start "
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+>
+  <Text
+    className="mt-[1px] font-notoSansThai font-medium text-[12px] text-error-500"
+    style={
+      {
+        "writingDirection": "ltr",
+      }
+    }
+  >
+    Text
+  </Text>
+</View>
+`;
+
+exports[`Button Component Variants Snapshots should render correctly with fullWidth 1`] = `
+<ViewManagerAdapter_ExpoLinearGradient
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessible={true}
+  colors={
+    [
+      4278223032,
+      4281571783,
+      4284920790,
+    ]
+  }
+  endPoint={
+    [
+      1,
+      0,
+    ]
+  }
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  startPoint={
+    [
+      0,
+      0,
+    ]
+  }
+>
+  <Text
+    className="mt-[1px] font-notoSansThai font-medium text-[12px] text-white"
+    style={
+      {
+        "writingDirection": "ltr",
+      }
+    }
+  >
+    Full Width
+  </Text>
+</ViewManagerAdapter_ExpoLinearGradient>
+`;
+
+exports[`Button Component Variants Snapshots should render correctly with primary contained variant (Gradient) 1`] = `
+<ViewManagerAdapter_ExpoLinearGradient
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessible={true}
+  colors={
+    [
+      4278223032,
+      4281571783,
+      4284920790,
+    ]
+  }
+  endPoint={
+    [
+      1,
+      0,
+    ]
+  }
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  startPoint={
+    [
+      0,
+      0,
+    ]
+  }
+>
+  <Text
+    className="mt-[1px] font-notoSansThai font-medium text-[12px] text-white"
+    style={
+      {
+        "writingDirection": "ltr",
+      }
+    }
+  >
+    Gradient
+  </Text>
+</ViewManagerAdapter_ExpoLinearGradient>
+`;
+
+exports[`Button Component Variants Snapshots should render correctly with secondary outlined variant 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessible={true}
+  className="flex flex-row items-center justify-center rounded-lg px-6 py-4 border bg-transparent self-start border-secondary-500 "
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+>
+  <Text
+    className="mt-[1px] font-notoSansThai font-medium text-[14px] text-secondary-500"
+    style={
+      {
+        "writingDirection": "ltr",
+      }
+    }
+  >
+    Outlined
+  </Text>
+</View>
+`;

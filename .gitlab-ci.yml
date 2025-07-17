@@ -1,0 +1,55 @@
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    # - .npm
+    # or with yarn:
+    - .yarn
+
+variables:
+  CI_DEBUG_SERVICES: 'true'
+
+stages:
+  - build
+  # - update-version
+
+.build: &build
+  image:
+    name: timbru31/node-alpine-git:18
+  services:
+    - timbru31/node-alpine-git:18
+  script:
+    - yarn install
+    - BUILD_VERSION=$APP_VERSION
+    - declare -i BUILD_ID=$(curl --location "$CORE_API_GET_BUILD_NUMBER_ENDPOINT/$BUILD_VERSION" | jq -r '.data.buildNumber')
+    - BUILD_ID=$BUILD_ID+1
+    - echo "Version=$BUILD_VERSION, Build Number=$BUILD_ID"
+    - APP_ENV=$EAS_BUILD_PROFILE EXPO_TOKEN=$EXPO_TOKEN APP_BUILD_NUMBER=$BUILD_ID NODE_OPTIONS=--max_old_space_size=4096 npx eas-cli update --branch $EAS_BUILD_PROFILE --message "version:$BUILD_VERSION-$BUILD_ID"
+    - curl --request POST "$CORE_API_CREATE_NEW_VERSION_ENDPOINT" --header "x-api-key:$CORE_API_API_KEY" --header "Content-type:application/json" --data "{\"version\":\"$BUILD_VERSION\",\"buildNumber\":\"$BUILD_ID\"}"
+    - curl --request POST "$CORE_API_NOTIFY_NEW_VERSION_ENDPOINT" --header "x-api-key:$CORE_API_API_KEY" --header "Content-type:application/json" --data "{\"version\":\"$BUILD_VERSION\",\"buildNumber\":\"$BUILD_ID\"}"
+
+.update-version: &update-version
+  image:
+    name: timbru31/node-alpine-git:18
+  services:
+    - timbru31/node-alpine-git:18
+  script:
+    - apk update
+    - apk add --update curl && apk add --update curl-dev && rm -rf /var/cache/apk/*
+
+eas-build:
+  <<: *build
+  stage: build
+  before_script: # For Overriding Global Variables, need to use script
+    - source .env.staging
+  only:
+    - /^.*development-deploy$/
+
+eas-build-production:
+  <<: *build
+  stage: build
+  environment:
+    name: production
+  before_script: # For Overriding Global Variables, need to use script
+    - source .env.production
+  only:
+    - /^.*production$/
